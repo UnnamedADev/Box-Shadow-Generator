@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>v0.0.2 - Box Shadow Generator</title>
+    <title>v0.0.3 - Box Shadow Generator</title>
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.2.1.min.js"></script>
     <script src="generator.js"></script>
@@ -14,25 +14,32 @@
     </header>
     <section>
         <h3>Choose configuration</h3>
-        <div class="contentHolder">
-            <p>Przesunięcie (lewo / prawo):</p>
+        <div id="configuration" class="contentHolder">
+            <p>Przesunięcie (lewo / prawo): <span id="sMoveXValue">0 px</span></p>
             -200px <input id="sMoveX" type="range" min="-200" max="200" value="0"> 200px
             
-            <p>Przesunięcie (góra / dół):</p>
+            <p>Przesunięcie (góra / dół): <span id="sMoveYValue">0 px</span></p>
             -200px <input id="sMoveY" type="range" min="-200" max="200" value="0"> 200px
             
-            <p>Rozmycie:</p>
+            <p>Rozmycie: <span id="sBlurValue">0 px</span></p> 
             -200px <input id="sBlur" type="range" min="-200" max="200" value="0"> 200px
             
-            <p>Rozmiar:</p>
+            <p>Rozmiar: <span id="sSizeValue">0 px</span></p> 
             -200px <input id="sSize" type="range" min="-200" max="200" value="0"> 200px
             
-            <p>Color:</p>
-            # <input id="sColor"> <div class="colorPreview"></div>
+            <p>Shadow color: <span id="sShadowColorValue">#0</span></p>
+            # <input id="sShadowColor"> <div class="colorPreview"></div>
+            
+            <p>Background color: <span id="sBackgroundColorValue">#0</span></p>
+            # <input id="sBackgroundColor"> <div class="colorPreview"></div>
+            
         </div>
     </section>
     <section>
         <h3>preview</h3>
+        <div class="contentHolder">
+            <div id="exampleDiv"></div>
+        </div>
         <h3>your code</h3>
     </section>
     <footer>
