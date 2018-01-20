@@ -2,12 +2,42 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>v0.0.1 - Box Shadow Generator</title>
+    <title>v0.0.2 - Box Shadow Generator</title>
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.2.1.min.js"></script>
     <script src="generator.js"></script>
 </head>
 <body>
-    
+    <header>
+        <h1>Box shadow generator</h1>
+        <h2>Generate your own</h2>
+    </header>
+    <section>
+        <h3>Choose configuration</h3>
+        <div class="contentHolder">
+            <p>Przesunięcie (lewo / prawo):</p>
+            -200px <input id="sMoveX" type="range" min="-200" max="200" value="0"> 200px
+            
+            <p>Przesunięcie (góra / dół):</p>
+            -200px <input id="sMoveY" type="range" min="-200" max="200" value="0"> 200px
+            
+            <p>Rozmycie:</p>
+            -200px <input id="sBlur" type="range" min="-200" max="200" value="0"> 200px
+            
+            <p>Rozmiar:</p>
+            -200px <input id="sSize" type="range" min="-200" max="200" value="0"> 200px
+            
+            <p>Color:</p>
+            # <input id="sColor"> <div class="colorPreview"></div>
+        </div>
+    </section>
+    <section>
+        <h3>preview</h3>
+        <h3>your code</h3>
+    </section>
+    <footer>
+        <h2>Here is site footer!</h2>
+        <p>Enjoy, even when its empty.</p>
+    </footer>
 </body>
 </html>
