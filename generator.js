@@ -62,6 +62,7 @@ $(document).ready(function(){
         var previewObj = document.getElementById("exampleDiv");
         
         refreshPreview(previewObj);
+        
     }
     
     function refreshPreview(previewObj){
@@ -74,8 +75,17 @@ $(document).ready(function(){
         var backgroundColor = "#"+document.getElementById("sBackgroundColor").value;
         
         previewObj.style.background = backgroundColor;
+        var shadowCode = moveX+moveY+blur+size+shadowColor
+        previewObj.style.boxShadow = shadowCode;
         
-        previewObj.style.boxShadow = moveX+moveY+blur+size+shadowColor;
-        
+        refreshCode(shadowCode);
+    }
+    
+    function refreshCode(shadow){
+        var codeField = document.getElementById("yourCode");
+        var cssShadow = "box-shadow: "+shadow+";<br>";
+        var cssShadowMoz = "-moz-box-shadow: "+shadow+";<br>";
+        var cssShadowWebkit = "-webkit-box-shadow: "+shadow+";<br>";
+        codeField.innerHTML = cssShadow+cssShadowMoz+cssShadowWebkit;
     }
 });
