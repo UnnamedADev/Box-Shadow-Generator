@@ -8,8 +8,23 @@ $(document).ready(function(){
     
     //main
     addInputEvents();
+    addCopyEvent();
     
     //fxs
+    function addCopyEvent(){
+        var myButton = document.getElementById("copyButton");
+        myButton.addEventListener("click", function(){
+            var copyField = document.getElementById("yourCode");
+            copyField.select();
+            document.execCommand("Copy");
+            
+            if ( document.selection ) {
+                document.selection.empty();
+            } else if ( window.getSelection ) {
+                window.getSelection().removeAllRanges();
+            }
+        });
+    }
     
     function addInputEvents(){
         var validDiv = document.getElementById("configuration");
@@ -83,9 +98,9 @@ $(document).ready(function(){
     
     function refreshCode(shadow){
         var codeField = document.getElementById("yourCode");
-        var cssShadow = "box-shadow: "+shadow+";<br>";
-        var cssShadowMoz = "-moz-box-shadow: "+shadow+";<br>";
-        var cssShadowWebkit = "-webkit-box-shadow: "+shadow+";<br>";
-        codeField.innerHTML = cssShadow+cssShadowMoz+cssShadowWebkit;
+        var cssShadow = "box-shadow: "+shadow+";\n";
+        var cssShadowMoz = "-moz-box-shadow: "+shadow+";\n";
+        var cssShadowWebkit = "-webkit-box-shadow: "+shadow+";\n";
+        codeField.value = cssShadow+cssShadowMoz+cssShadowWebkit;
     }
 });

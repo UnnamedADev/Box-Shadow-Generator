@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>v0.0.5 - Box Shadow Generator</title>
+    <title>v0.0.6 - Box Shadow Generator</title>
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.2.1.min.js"></script>
     <script src="generator.js"></script>
@@ -12,6 +12,7 @@
         <h1>Box shadow generator</h1>
         <h2>Generate your own</h2>
     </header>
+    <div class="wrapper">
     <section>
         <h3>Choose configuration</h3>
         <div id="configuration" class="contentHolder">
@@ -41,13 +42,14 @@
             <div id="exampleDiv"></div>
         </div>
         <h3>your code</h3>
-        <div class="contentHolder" id="yourCode">
-            box-shadow: ;<br>
-            -moz-box-shadow: ;<br>
-            -webkit-box-shadow: ;<br>
-        </div>
-        <button>Skopiuj kod do schowka</button>
+        <textarea class="contentHolder" id="yourCode" placeholder="Twój kod pojawi się tutaj!" >
+box-shadow: ;
+-moz-box-shadow: ;
+-webkit-box-shadow: ;
+        </textarea>
+        <button id="copyButton" class="contentButton">Skopiuj kod do schowka</button>
     </section>
+    </div>
     <footer>
         <h2>Here is site footer!</h2>
         <p>Enjoy, even when its empty.</p>
